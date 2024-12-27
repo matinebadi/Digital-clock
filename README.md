@@ -1,38 +1,69 @@
 ![digital_clocke](https://github.com/user-attachments/assets/34da19c0-cf73-438c-8500-f8b68b5b212d)
 
 
-1. Imports:
-   - The code imports classes and functions from tkinter, datetime, and PIL libraries. 
-   - tkinter is used for creating GUI applications, datetime manages date and time, and PIL (Python Imaging Library) handles image processing.
+# Digital Watch - Tehran Time
 
-2.Window Setup: 
-   - A Tk instance is created, which serves as the main application window.
-   - The window title is set to "Digital Watch - Tehran Time".
-   - The geometry of the window is defined as 240x100 pixels.
-   - The window's transparency is adjusted to 70% with attributes('-alpha', 0.7), creating a sleek appearance.
-   - The window can be resized by the user through resizable(True, True).
+A simple digital clock application developed in Python using Tkinter. This project displays the current time in Tehran, Iran with a modern, minimalistic interface.
 
-3.Background Image:
-   - A black background image is created and set to cover the entire window using Label.
-   - The background label utilizes ImageTk from PIL for proper image display.
+## Features
 
-4.Font Settings:
-   - A custom font is created using tkFont.Font, specifying "Times New Roman" with a size of 60 for the time display.
+- **Live Clock:** Displays the current time in Tehran (UTC+3:30).
+- **Digital Display:** Uses a clear, readable font for time and date.
+- **Background Image:** A black background with adjustable opacity.
+- **Responsive Font:** The font size adjusts based on the window size to maintain readability.
 
-5.Time Calculation:
-   - The mytime() function calculates Tehran's current time by converting UTC to Tehran time (UTC +3:30).
-   - The time is formatted to display hours, minutes, seconds, AM/PM style, day of the week, and date.
+## Requirements
 
-6.Dynamic Display Update:
-   - The time and date are set to be updated every second (1000 milliseconds) using after(1000, mytime) which recursively calls the mytime function.
-   - The font size is dynamically adjusted based on the height of the window with Window.winfo_height().
+- Python 3.x
+- Tkinter
+- Pillow (PIL)
 
-7. Labels for Time and Date:
-   - Two labels (MyLabel and MyLabel2) display the formatted time and date information.
-   - These labels are configured with specific text and styles, including font color and background.
+You can install the required libraries using pip:
 
-8.Main Loop:
-   - The Window.mainloop() function starts the event loop, keeping the application running and responsive to user interactions.
+```bash
+pip install pillow
 
-Summary:
-This code creates a visually appealing digital watch that displays the current time and date in Tehran, complete with a transparent background and dynamic font sizing. The interface updates every second, ensuring users see the accurate current time. Perfect for anyone wanting a stylish digital clock on their screen
+How to Run
+
+1. Clone or download the project.
+
+
+2. Open a terminal and navigate to the project directory.
+
+
+3. Run the script:
+
+
+
+python digital_watch.py
+
+Code Explanation
+
+Tkinter Window Setup
+
+The window is created using Tkinter with specific properties:
+
+Title: Digital Watch - Tehran Time
+
+Dimensions: 240x100
+
+Transparency: The window has a slight transparency with alpha = 0.7.
+
+Resizable: The window can be resized to adjust the font size dynamically.
+
+
+Time Calculation
+
+The script calculates the current time in Tehran by adding 3 hours and 30 minutes to UTC time. It uses the datetime library to format the time and date.
+
+Fonts and Labels
+
+The main clock is displayed using the Times New Roman font with a size dynamically adjusted to the window height.
+
+The date and day are displayed in a smaller font, with a contrasting color for readability.
+
+
+Loop and Update
+
+The clock updates every second using the after() method of Tkinter, ensuring the time is always current.
+
